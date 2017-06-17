@@ -1,0 +1,11 @@
+description = 'CarBuilder'
+group = 'com.china.carbuilder.core'
+
+jar {
+    baseName = 'carbuilder-core'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies{
+
+}

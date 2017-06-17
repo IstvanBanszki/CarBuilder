@@ -1,0 +1,5 @@
+rootProject.name = 'CarBuilder'
+
+include 'carbuilder-api'
+include 'carbuilder-core'
+include 'carbuilder-jdbc'

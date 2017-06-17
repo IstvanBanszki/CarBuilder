@@ -1,0 +1,11 @@
+description = 'CarBuilder'
+group = 'com.china.carbuilder.jdbc'
+
+jar {
+    baseName = 'carbuilder-jdbc'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies{
+
+}

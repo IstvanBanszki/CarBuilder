@@ -1,0 +1,17 @@
+description = 'CarBuilder'
+
+allprojects {
+    apply plugin: 'base'
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+
+    group = 'com.china.carbuilder'
+
+    repositories {
+    	mavenCentral()
+    }
+	
+    dependencies {
+	}
+}
+

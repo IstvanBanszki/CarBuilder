@@ -1,0 +1,11 @@
+description = 'CarBuilder'
+group = 'com.china.carbuilder.api'
+
+jar {
+    baseName = 'carbuilder-api'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies{
+
+}
