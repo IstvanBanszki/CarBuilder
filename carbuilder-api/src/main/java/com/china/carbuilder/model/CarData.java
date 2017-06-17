@@ -5,39 +5,39 @@ import java.util.Objects;
 public class CarData {
     
     private final int id;
-    private final String firstName;
-    private final String lastName;
+    private final String brand;
+    private final String type;
     private final int buildNumber;
 
     public CarData(int id, String firstName, String lastName, int buildNumber) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.brand = firstName;
+        this.type = lastName;
         this.buildNumber = buildNumber;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getBrand() {
+        return this.brand;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getType() {
+        return this.type;
     }
 
     public int getBuildNumber() {
-        return buildNumber;
+        return this.buildNumber;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 67 * hash + this.id;
-        hash = 67 * hash + Objects.hashCode(this.firstName);
-        hash = 67 * hash + Objects.hashCode(this.lastName);
+        hash = 67 * hash + Objects.hashCode(this.brand);
+        hash = 67 * hash + Objects.hashCode(this.type);
         hash = 67 * hash + this.buildNumber;
         return hash;
     }
@@ -58,13 +58,13 @@ public class CarData {
             return false;
         }
         return (this.buildNumber != other.buildNumber) && 
-               (!Objects.equals(this.firstName, other.firstName)) &&
-               (!Objects.equals(this.lastName, other.lastName));
+               (!Objects.equals(this.brand, other.brand)) &&
+               (!Objects.equals(this.type, other.type));
     }
 
     @Override
     public String toString() {
-        return "CarData{id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", buildNumber=" + buildNumber + '}';
+        return "CarData{id=" + this.id + ", brand=" + this.brand + ", type=" + this.type + ", buildNumber=" + this.buildNumber + '}';
     }
     
 }

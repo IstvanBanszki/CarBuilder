@@ -8,4 +8,5 @@ jar {
 
 dependencies{
 
+	compile project(':carbuilder-jdbc')
 }
