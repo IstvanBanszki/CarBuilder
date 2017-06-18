@@ -64,7 +64,7 @@ public class CarData {
 
     @Override
     public String toString() {
-        return "CarData{id=" + this.id + ", brand=" + this.brand + ", type=" + this.type + ", buildNumber=" + this.buildNumber + '}';
+        return "CarData{brand=" + this.brand + ", type=" + this.type + ", buildNumber=" + this.buildNumber + '}';
     }
     
 }
