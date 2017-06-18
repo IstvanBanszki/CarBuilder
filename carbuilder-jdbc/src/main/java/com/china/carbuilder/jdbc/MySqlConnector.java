@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class MySqlConnector {
     
     //Constant strings
-    private static final String URL = "jdbc:mysql://localhost:3306/carbuilder?useSSL=false";
+    private static final String URL = "jdbc:mysql://localhost:3306/car_builder?useSSL=false&serverTimezone=UTC";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
     

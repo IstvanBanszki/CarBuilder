@@ -1,4 +1,4 @@
-rootProject.name = 'CarBuilder'
+rootProject.name = 'carbuilder'
 
 include 'carbuilder-api'
 include 'carbuilder-core'

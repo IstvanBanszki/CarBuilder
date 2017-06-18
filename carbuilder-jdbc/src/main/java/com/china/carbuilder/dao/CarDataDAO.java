@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,7 +21,7 @@ class CarDataDAO extends MySqlConnector implements ICarDataDAO {
     
     @Override
     public List<CarData> getCarData() {
-        List<CarData> result = Collections.EMPTY_LIST;
+        List<CarData> result = new LinkedList();
         
         try(Connection connection = getConnection();
             Statement statement = connection.createStatement();

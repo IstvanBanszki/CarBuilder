@@ -6,7 +6,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -21,7 +22,7 @@ class CarPartsDAO extends MySqlConnector implements ICarPartsDAO {
 
     @Override
     public Map<Integer, List<Part>> getCarParts() {
-        Map<Integer, List<Part>> result = Collections.EMPTY_MAP;
+        Map<Integer, List<Part>> result = new HashMap();
         
         try(Connection connection = getConnection();
             Statement statement = connection.createStatement();
@@ -31,11 +32,11 @@ class CarPartsDAO extends MySqlConnector implements ICarPartsDAO {
                 int id = rs.getInt("id");
                 
                 if (!result.containsKey(id)) {
-                    List<Part> parts = Collections.EMPTY_LIST;
-                    parts.add(new Part(rs.getString("name"), rs.getInt("id")));
+                    List<Part> parts = new LinkedList();
+                    parts.add(new Part(rs.getString("name"), rs.getInt("number")));
                     result.put(id, parts);
                 } else {
-                    result.get(id).add(new Part(rs.getString("name"), rs.getInt("id")));
+                    result.get(id).add(new Part(rs.getString("name"), rs.getInt("number")));
                 }
             }
         } catch (SQLException ex) {

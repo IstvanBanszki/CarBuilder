@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface ICarService {
     
-    List<Car> getCar();
+    List<Car> getCars();
 
 }
