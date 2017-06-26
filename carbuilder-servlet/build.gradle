@@ -1,0 +1,14 @@
+description = 'CarBuilder-Servlet'
+
+apply plugin: 'war'
+
+war {
+    baseName = 'carbuilder-servlet'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies{
+
+	compile 'javax:javaee-api:7.0'
+	compile project(':carbuilder-service')
+}

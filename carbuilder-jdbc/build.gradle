@@ -1,4 +1,4 @@
-description = 'CarBuilder'
+description = 'CarBuilder-JDBC'
 
 jar {
     baseName = 'carbuilder-jdbc'
