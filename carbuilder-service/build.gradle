@@ -1,0 +1,11 @@
+description = 'CarBuilder-Service'
+
+jar {
+    baseName = 'carbuilder-service'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies{
+
+	compile project(':carbuilder-jdbc')
+}

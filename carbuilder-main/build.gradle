@@ -1,0 +1,17 @@
+description = 'CarBuilder-Main'
+
+jar {
+    baseName = 'carbuilder-main'
+	version = '0.0.1-SNAPSHOT'
+    from { 
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } 
+	}
+    manifest {
+      attributes 'Main-Class': 'com.china.carbuilder.main.Main'
+    }
+}
+
+dependencies{
+
+	compile project(':carbuilder-service')
+}

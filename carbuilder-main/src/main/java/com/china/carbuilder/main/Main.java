@@ -1,6 +1,6 @@
-package com.china.carbuilder.core.main;
+package com.china.carbuilder.main;
 
-import com.china.carbuilder.core.service.CarService;
+import com.china.carbuilder.service.CarService;
 import com.china.carbuilder.model.Car;
 import java.util.List;
 import java.util.StringJoiner;

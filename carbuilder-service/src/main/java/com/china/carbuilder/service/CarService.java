@@ -1,10 +1,9 @@
-package com.china.carbuilder.core.service;
+package com.china.carbuilder.service;
 
 import com.china.carbuilder.dao.CarDAO;
 import com.china.carbuilder.model.Car;
 import com.china.carbuilder.model.CarData;
 import com.china.carbuilder.model.Part;
-import com.china.carbuilder.service.ICarService;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
