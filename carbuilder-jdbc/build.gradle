@@ -8,6 +8,7 @@ jar {
 dependencies{
 
 	compile project(':carbuilder-api')
+	compile 'javax.enterprise:cdi-api:2.0'
 	compile 'mysql:mysql-connector-java:6.0.6'
 
 }

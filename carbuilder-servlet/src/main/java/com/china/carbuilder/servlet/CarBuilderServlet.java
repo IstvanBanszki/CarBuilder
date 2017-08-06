@@ -1,10 +1,11 @@
 package com.china.carbuilder.servlet;
 
 import com.china.carbuilder.model.Car;
-import com.china.carbuilder.service.CarService;
+import com.china.carbuilder.service.ICarService;
 import java.io.IOException;
 import java.util.List;
 import java.util.StringJoiner;
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,11 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 
 public class CarBuilderServlet extends HttpServlet {
 
+  @Inject private ICarService carService;
+    
   protected void doGet(HttpServletRequest request,
                        HttpServletResponse response)
         throws ServletException, IOException {
 
-      List<Car> cars = new CarService().getCars();
+      List<Car> cars = this.carService.getCars();
       StringJoiner sj = new StringJoiner("</tr><tr>", 
               "<table><tr>"
                       + "<th>Brand</th>"

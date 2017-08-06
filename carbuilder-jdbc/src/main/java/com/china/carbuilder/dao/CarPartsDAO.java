@@ -12,8 +12,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.enterprise.context.RequestScoped;
 
-class CarPartsDAO extends MySqlConnector implements ICarPartsDAO {
+@RequestScoped
+public class CarPartsDAO extends MySqlConnector implements ICarPartsDAO {
     
     private final static String QUERY = "SELECT ct.id, ps.name, cpc.number \n" +
                                         "  FROM car_type ct, car_part_connection cpc, part_storage ps \n" +

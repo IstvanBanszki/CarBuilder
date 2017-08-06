@@ -10,8 +10,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.enterprise.context.RequestScoped;
 
-class CarDataDAO extends MySqlConnector implements ICarDataDAO {
+@RequestScoped
+public class CarDataDAO extends MySqlConnector implements ICarDataDAO {
 
     private final static String QUERY = "SELECT ct.id, ct.name AS car_name, ct.brand AS car_brand, MIN(ps.number/cpc.number) as build_number \n" +
                                         "  FROM car_type ct, car_part_connection cpc, part_storage ps \n" +
